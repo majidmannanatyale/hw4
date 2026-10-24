@@ -6,6 +6,11 @@ This guide explains how to run it from a fresh clone.
 
 ---
 
+> ## ⚠️ Required: you must supply a `data/` folder
+> This repository does **not** include the product images or the `campus_customs.db` database (they're excluded via `.gitignore`). **The app will not run without them.** You must obtain the provided `data/` folder and place it **one level above** the `hw4/` folder, so the paths look like `../data/campus_customs.db`, `../data/products/`, and (optionally) `../data/products_clean/`. See **Expected folder layout** below.
+
+---
+
 ## Clone the repository
 
 ```bash
