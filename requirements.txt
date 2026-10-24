@@ -1,0 +1,13 @@
+# Campus Customs backend (FastAPI)
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# Chatbot: PydanticAI agent + OpenAI SDK (routed through the Portkey gateway).
+# Project rules prefer pydantic-ai-slim[openai], but that extra pulls `tiktoken`, which has
+# no prebuilt wheel for Windows on ARM64 and fails to build without a Rust toolchain. We
+# therefore install the slim core plus the openai SDK directly (tiktoken is not needed at
+# runtime for our usage). On x86/other platforms you may instead use: pydantic-ai-slim[openai]
+pydantic-ai-slim
+openai

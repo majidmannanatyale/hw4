@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Customs — App Check</title>
+    <style>
+      :root {
+        --royal: #1f3f99;
+        --ink: #0e1a3a;
+        --gold: #b8975a;
+        --cream: #f7f3ea;
+        --line: #e2dccd;
+        --muted: #5e6475;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+        color: #1c2233;
+        background: var(--cream);
+        line-height: 1.6;
+      }
+      header {
+        background: linear-gradient(135deg, var(--royal), var(--ink));
+        color: #fff;
+        padding: 40px 24px;
+        text-align: center;
+      }
+      header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0.01em; }
+      header p { margin: 0; color: #d8c39a; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; }
+      main { max-width: 900px; margin: 0 auto; padding: 32px 24px 64px; }
+      section {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-top: 3px solid var(--royal);
+        border-radius: 4px;
+        padding: 24px 28px 28px;
+        margin-bottom: 28px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 0 0 4px;
+        color: var(--ink);
+      }
+      .num {
+        display: inline-grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--royal);
+        color: #fff;
+        font-size: 14px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      .check {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 2px 0 16px;
+      }
+      figure { margin: 0; }
+      img {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--cream);
+      }
+      figcaption {
+        margin-top: 12px;
+        padding: 12px 14px;
+        background: var(--cream);
+        border-left: 3px solid var(--gold);
+        font-size: 14px;
+        color: var(--muted);
+      }
+      figcaption strong { color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Campus Customs — App Check</h1>
+      <p>Chatbot behaviour verification</p>
+    </header>
+
+    <main>
+      <section>
+        <h2><span class="num">1</span>Inventory Level</h2>
+        <p class="check">
+          Check: the chat can look up an item's real price and stock from the database — not invented values.
+        </p>
+        <figure>
+          <img src="app_check_images/inventory.png" alt="Chat showing the Baseball Left Chest Crewneck at $58 with per-size stock" />
+          <figcaption>
+            <strong>Explanation:</strong> the Concierge was
+            asked about the Baseball Left Chest Crewneck and returned the real price ($58) and per-size stock from
+            campus_customs.db, with sold-out sizes (XS, XL) struck through on the card.]
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">2</span>Dynamic search-result cards</h2>
+        <p class="check">
+          Check: asking a category question ("show me blue hoodies") populates dynamic product cards from the database.
+        </p>
+        <figure>
+          <img src="app_check_images/dynamic_cards.png" alt="Chat showing product cards for blue hoodies with prices" />
+          <figcaption>
+            <strong>Explanation:</strong> the Concierge was
+            asked "show me blue hoodies" and returned matching navy-blue hoodie cards (with images, names, prices and
+            sizes) that are clickable through to each product page.]
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">3</span>Chat Clarifying Questions</h2>
+        <p class="check">
+          Check: for a vague prompt, the chat asks a clarifying question back before running a search.
+        </p>
+        <figure>
+          <img src="app_check_images/clarifying_questions.png" alt="Chat asking a clarifying question in response to a vague request" />
+          <figcaption>
+            <strong>Explanation:</strong> the Concierge was
+            asked the vague "show me sweaters" and, instead of dumping results, asked which style (crewneck, hoodie,
+            quarter-zip), colour, or budget to narrow by — with no product cards shown yet.]
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
